@@ -1,0 +1,35 @@
+{
+  "name": "musical-interval",
+  "version": "0.1.0",
+  "description": "(Well tempered, western) Musical intervals",
+  "main": "interval.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "vows test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danigb/musical-interval.git"
+  },
+  "keywords": [
+    "music",
+    "interval",
+    "intervals",
+    "solfege",
+    "notes",
+    "pitch",
+    "distance",
+    "theory"
+  ],
+  "author": "danigb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danigb/musical-interval/issues"
+  },
+  "homepage": "https://github.com/danigb/musical-interval#readme",
+  "devDependencies": {
+    "vows": "^0.8.1"
+  }
+}
