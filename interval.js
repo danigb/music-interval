@@ -39,4 +39,5 @@ Interval.names.forEach(function (name) {
   Interval.all.push(i)
 })
 
-module.exports = Interval
+if (typeof module === 'object' && module.exports) module.exports = Interval
+if (typeof window !== 'undefined') window.Interval = Interval
