@@ -1,6 +1,10 @@
 # musical-interval
 
-_Western, well tempered_ musical intervals with javascript:
+[![Code Climate](https://codeclimate.com/github/danigb/musical-interval/badges/gpa.svg)](https://codeclimate.com/github/danigb/musical-interval)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+
+
+_Western, well tempered_ musical intervals in 1.2kb of javascript:
 
 ```js
 var Interval = require('musical-interval')
