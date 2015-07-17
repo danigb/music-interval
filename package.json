@@ -1,6 +1,6 @@
 {
   "name": "musical-interval",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "(Well tempered, western) Musical intervals",
   "main": "interval.js",
   "directories": {
