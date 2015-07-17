@@ -38,6 +38,14 @@ function Interval (name) {
   }
 }
 
+var INVERT = {'d': 'A', 'm': 'M', 'P': 'P', 'M': 'm', 'A': 'd'}
+Interval.prototype.invert = function () {
+  var pivot = this.num < 0 ? -9 : 9
+  var num = pivot - this.num
+  var q = INVERT[this.name[0]]
+  return new Interval(q + num)
+}
+
 Interval.names = function (distance) {
   if (!distance) return NAMES
   var abs = Math.abs(distance)

@@ -12,6 +12,16 @@ vows.describe('Tonal intervals').addBatch({
     assert.deepEqual(Interval.names(-2), ['M-2', 'd-3'])
     assert.deepEqual(Interval.names(14), ['M9', 'd10'])
   },
+  'invert': function () {
+    assert.deepEqual(Interval('P5').invert(), Interval('P4'))
+    assert.deepEqual(Interval('P4').invert(), Interval('P5'))
+    assert.deepEqual(Interval('M3').invert(), Interval('m6'))
+    assert.deepEqual(Interval('M7').invert(), Interval('m2'))
+    assert.deepEqual(Interval('m-2').invert(), Interval('M-7'))
+    assert.deepEqual(Interval('A-3').invert(), Interval('d-6'))
+    assert.deepEqual(Interval('M9').invert(), Interval('m7'))
+    assert.deepEqual(Interval('M-9').invert(), Interval('m-7'))
+  },
   'simple intervals': function () {
     simples().forEach(function (interval) {
       var i = Interval(interval.name)

@@ -23,9 +23,9 @@ Install with npm: `npm i --save musical-interval` or use directly with the brows
 Create a new interval. It has the following properties:
 
 - name: the name of the interval
-- num: the simplified number (always between -9 and 9)
+- num: the __simplified__ number (always between -9 and 9)
 - oct: the number of octaves (can be negative)
-- dist: the distance in semitiones (whithout octaves). Can be negative
+- dist: the distance in semitiones (__whithout octaves__: a number between -12 and 12)
 
 ```js
 Interval('P-5')
