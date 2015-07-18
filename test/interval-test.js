@@ -9,6 +9,7 @@ function simples () {
 vows.describe('Tonal intervals').addBatch({
   'names': function () {
     assert.deepEqual(Interval.names(2), ['M2', 'd3'])
+    assert.deepEqual(Interval.names(7), ['P5', 'd6'])
     assert.deepEqual(Interval.names(-2), ['M-2', 'd-3'])
     assert.deepEqual(Interval.names(14), ['M9', 'd10'])
   },

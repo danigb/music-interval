@@ -48,7 +48,12 @@ This method can be use `new` operator (`new Interval('P8')`)
 ## Interval.names([semitones])
 
 If no argument is given, it returns array with the names of all ascending,
-simple intervals (between d1 to A8). If a number is provided, it returns the names of all the intervals that have that distance.
+simple intervals (between d1 to A8). If a number is provided, it returns the names of all the intervals that have that distance (in semitones).
+
+```js
+Interval.names(7)  // => ['P5', 'd6']
+Interval.names(-2) // => ['M-2', 'd-3'
+```
 
 # License
 
