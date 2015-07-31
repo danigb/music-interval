@@ -6,12 +6,19 @@ function simples () {
   return Interval.names().map(Interval)
 }
 
-vows.describe('Tonal intervals').addBatch({
-  'names': function () {
-    assert.deepEqual(Interval.names(2), ['M2', 'd3'])
-    assert.deepEqual(Interval.names(7), ['P5', 'd6'])
-    assert.deepEqual(Interval.names(-2), ['M-2', 'd-3'])
-    assert.deepEqual(Interval.names(14), ['M9', 'd10'])
+vows.describe('Intervals').addBatch({
+  'names': {
+    'all names': function () {
+      assert.deepEqual(Interval.names(), ['d1', 'P1', 'A1', 'd2', 'm2', 'M2', 'A2',
+        'd3', 'm3', 'M3', 'A3', 'd4', 'P4', 'A4', 'd5', 'P5', 'A5', 'd6', 'm6', 'M6', 'A6',
+        'd7', 'm7', 'M7', 'A7', 'd8', 'P8', 'A8'])
+    },
+    'ascending': function () {
+      assert.deepEqual(Interval.names(2), ['M2', 'd3'])
+      assert.deepEqual(Interval.names(7), ['P5', 'd6'])
+      assert.deepEqual(Interval.names(-2), ['M-2', 'd-3'])
+      assert.deepEqual(Interval.names(14), ['M9', 'd10'])
+    }
   },
   'invert': function () {
     assert.deepEqual(Interval('P5').invert(), Interval('P4'))

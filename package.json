@@ -1,7 +1,7 @@
 {
-  "name": "musical-interval",
-  "version": "0.2.0",
-  "description": "(Well tempered, western) Musical intervals",
+  "name": "music-interval",
+  "version": "0.2.1",
+  "description": "(Well tempered, western) Tiny and fast music theory intervals library",
   "main": "interval.js",
   "directories": {
     "test": "test"
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danigb/musical-interval.git"
+    "url": "git+https://github.com/danigb/music-interval.git"
   },
   "keywords": [
     "music",
@@ -21,15 +21,17 @@
     "notes",
     "pitch",
     "distance",
-    "theory"
+    "theory",
+    "music theory"
   ],
-  "author": "danigb",
+  "author": "danigb <danigb@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danigb/musical-interval/issues"
+    "url": "https://github.com/danigb/music-interval/issues"
   },
-  "homepage": "https://github.com/danigb/musical-interval#readme",
+  "homepage": "https://github.com/danigb/music-interval#readme",
   "devDependencies": {
+    "range": "0.0.3",
     "vows": "^0.8.1"
   }
 }
