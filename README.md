@@ -3,58 +3,126 @@
 [![Code Climate](https://codeclimate.com/github/danigb/musical-interval/badges/gpa.svg)](https://codeclimate.com/github/danigb/musical-interval)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
-
-_Western, well tempered_ musical intervals in 1.6kb of javascript:
+Simple and fast musical interval library:
 
 ```js
-var Interval = require('musical-interval')
-var fifth = Interval('P5')
-fifth.dist // => 7
+var interval = require('musical-interval')
+interval.simplify('9M') // => '2M'
+interval.invert('3M') // => '6m'
 ```
 
 ## Install
 
-Install with npm: `npm i --save musical-interval` or use directly with the browser (although, browserify or webpack is recommended).
-
 ## API
 
-### Interval(name)
+<!-- START docme generated API please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN docme TO UPDATE -->
 
-Create a new interval. It has the following properties:
+<div>
+<div class="jsdoc-githubify">
+<section>
+<article>
+<div class="container-overview">
+<dl class="details">
+</dl>
+</div>
+<dl>
+<dt>
+<h4 class="name" id="invert"><span class="type-signature"></span>invert<span class="type-signature"></span></h4>
+</dt>
+<dd>
+<div class="description">
+<p>Get the inversion of an interval. The inversion of an interval is always a
+simple interval</p>
+</div>
+<dl class="details">
+<dt class="tag-source">Source:</dt>
+<dd class="tag-source"><ul class="dummy">
+<li>
+<a href="https://github.com/danigb/music-interval/blob/master/index.js">index.js</a>
+<span>, </span>
+<a href="https://github.com/danigb/music-interval/blob/master/index.js#L42">lineno 42</a>
+</li>
+</ul></dd>
+</dl>
+<h5>Example</h5>
+<pre class="prettyprint"><code>invert('3M') // => '6m'</code></pre>
+</dd>
+<dt>
+<h4 class="name" id="semitones"><span class="type-signature"></span>semitones<span class="type-signature"></span></h4>
+</dt>
+<dd>
+<div class="description">
+<p>Get the semitones of a interval</p>
+</div>
+<dl class="details">
+<dt class="tag-source">Source:</dt>
+<dd class="tag-source"><ul class="dummy">
+<li>
+<a href="https://github.com/danigb/music-interval/blob/master/index.js">index.js</a>
+<span>, </span>
+<a href="https://github.com/danigb/music-interval/blob/master/index.js#L99">lineno 99</a>
+</li>
+</ul></dd>
+</dl>
+<h5>Example</h5>
+<pre class="prettyprint"><code>semitones('5P') // => 7
+semitones('-5P') // => -7</code></pre>
+</dd>
+<dt>
+<h4 class="name" id="simplify"><span class="type-signature"></span>simplify<span class="type-signature"></span></h4>
+</dt>
+<dd>
+<div class="description">
+<p>Simplify an interval</p>
+</div>
+<dl class="details">
+<dt class="tag-source">Source:</dt>
+<dd class="tag-source"><ul class="dummy">
+<li>
+<a href="https://github.com/danigb/music-interval/blob/master/index.js">index.js</a>
+<span>, </span>
+<a href="https://github.com/danigb/music-interval/blob/master/index.js#L20">lineno 20</a>
+</li>
+</ul></dd>
+</dl>
+<h5>Example</h5>
+<pre class="prettyprint"><code>simplify('9M') // => '2M'
+simplify('-9M') // => '-2M'</code></pre>
+</dd>
+<dt>
+<h4 class="name" id="type"><span class="type-signature"></span>type<span class="type-signature"></span></h4>
+</dt>
+<dd>
+<div class="description">
+<p>Get the type of an interval (<code>'P'</code> for <strong>perfetable</strong> and <code>'M'</code> for <strong>majorable</strong>)</p>
+<p>It does NOT return the quality of the interval (@see interval/quality)</p>
+</div>
+<dl class="details">
+<dt class="tag-source">Source:</dt>
+<dd class="tag-source"><ul class="dummy">
+<li>
+<a href="https://github.com/danigb/music-interval/blob/master/index.js">index.js</a>
+<span>, </span>
+<a href="https://github.com/danigb/music-interval/blob/master/index.js#L63">lineno 63</a>
+</li>
+</ul></dd>
+</dl>
+<h5>Example</h5>
+<pre class="prettyprint"><code>type('4P') // => 'P'
+type('5A') // => 'P'
+type('3m') // => 'M'
+type('2d') // => 'M'</code></pre>
+</dd>
+</dl>
+</article>
+</section>
+</div>
 
-- name: the name of the interval
-- num: the __simplified__ number (always between -9 and 9)
-- oct: the number of octaves (can be negative)
-- dist: the distance in semitiones (__whithout octaves__: a number between -12 and 12)
+*generated with [docme](https://github.com/thlorenz/docme)*
+</div>
+<!-- END docme generated API please keep comment here to allow auto update -->
 
-```js
-Interval('P-5')
-// { name: 'P-5', num: -5, oct: 0, dist: -7 }
-Interval('M9')
-// { name: 'M9', num: 2, oct: 1, dist: 2 }
-```
-
-If the string is not a valid interval, an error is thrown:
-
-```js
-// throws error
-Interval('blahblah')
-Interval('a4') // A must be uppercase
-Interval('P2') // 2 is not a perfect interval
-```
-
-This method can be use `new` operator (`new Interval('P8')`)
-
-## Interval.names([semitones])
-
-If no argument is given, it returns array with the names of all ascending,
-simple intervals (between d1 to A8). If a number is provided, it returns the names of all the intervals that have that distance (in semitones).
-
-```js
-Interval.names(7)  // => ['P5', 'd6']
-Interval.names(-2) // => ['M-2', 'd-3'
-```
-
-# License
+## License
 
 MIT License

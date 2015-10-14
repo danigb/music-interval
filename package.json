@@ -3,11 +3,9 @@
   "version": "0.2.1",
   "description": "Music intervals",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "vows --spec test/*.js"
+    "test": "vows --spec test/*.js",
+    "docs": "docme README.md"
   },
   "repository": {
     "type": "git",
@@ -29,6 +27,6 @@
     "vows": "^0.8.1"
   },
   "dependencies": {
-    "interval-parser": "^0.9.0"
+    "interval-parser": "^0.9.1"
   }
 }

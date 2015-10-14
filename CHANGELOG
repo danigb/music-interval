@@ -1,5 +1,6 @@
 
 [0.3.0]
+- Add simplify, invert, type and semitones
 - Full rewrite (based on tonal)
 
 [0.2.1]
