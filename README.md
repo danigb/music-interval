@@ -1,17 +1,25 @@
-# musical-interval
+# music-interval
 
-[![Code Climate](https://codeclimate.com/github/danigb/musical-interval/badges/gpa.svg)](https://codeclimate.com/github/danigb/musical-interval)
+[![Code Climate](https://codeclimate.com/github/danigb/music-interval/badges/gpa.svg)](https://codeclimate.com/github/danigb/music-interval)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 Simple and fast musical interval library:
 
 ```js
-var interval = require('musical-interval')
+var interval = require('music-interval')
 interval.simplify('9M') // => '2M'
 interval.invert('3M') // => '6m'
 ```
 
 ## Install
+
+Use npm: `npm i --save music-interval` and require it:
+
+```js
+var interval = require('music-interval')
+```
+
+For browser use browserify or webpack.
 
 ## API
 
@@ -41,7 +49,7 @@ simple interval</p>
 <li>
 <a href="https://github.com/danigb/music-interval/blob/master/index.js">index.js</a>
 <span>, </span>
-<a href="https://github.com/danigb/music-interval/blob/master/index.js#L42">lineno 42</a>
+<a href="https://github.com/danigb/music-interval/blob/master/index.js#L47">lineno 47</a>
 </li>
 </ul></dd>
 </dl>
@@ -61,7 +69,7 @@ simple interval</p>
 <li>
 <a href="https://github.com/danigb/music-interval/blob/master/index.js">index.js</a>
 <span>, </span>
-<a href="https://github.com/danigb/music-interval/blob/master/index.js#L99">lineno 99</a>
+<a href="https://github.com/danigb/music-interval/blob/master/index.js#L104">lineno 104</a>
 </li>
 </ul></dd>
 </dl>
@@ -82,7 +90,7 @@ semitones('-5P') // => -7</code></pre>
 <li>
 <a href="https://github.com/danigb/music-interval/blob/master/index.js">index.js</a>
 <span>, </span>
-<a href="https://github.com/danigb/music-interval/blob/master/index.js#L20">lineno 20</a>
+<a href="https://github.com/danigb/music-interval/blob/master/index.js#L25">lineno 25</a>
 </li>
 </ul></dd>
 </dl>
@@ -104,7 +112,7 @@ simplify('-9M') // => '-2M'</code></pre>
 <li>
 <a href="https://github.com/danigb/music-interval/blob/master/index.js">index.js</a>
 <span>, </span>
-<a href="https://github.com/danigb/music-interval/blob/master/index.js#L63">lineno 63</a>
+<a href="https://github.com/danigb/music-interval/blob/master/index.js#L68">lineno 68</a>
 </li>
 </ul></dd>
 </dl>
@@ -113,6 +121,26 @@ simplify('-9M') // => '-2M'</code></pre>
 type('5A') // => 'P'
 type('3m') // => 'M'
 type('2d') // => 'M'</code></pre>
+</dd>
+</dl>
+<dl>
+<dt>
+<h4 class="name" id="interval"><span class="type-signature"></span>interval<span class="signature">()</span><span class="type-signature"></span></h4>
+</dt>
+<dd>
+<div class="description">
+<p>Get an inversal string from source or null if not a valid interval</p>
+</div>
+<dl class="details">
+<dt class="tag-source">Source:</dt>
+<dd class="tag-source"><ul class="dummy">
+<li>
+<a href="https://github.com/danigb/music-interval/blob/master/index.js">index.js</a>
+<span>, </span>
+<a href="https://github.com/danigb/music-interval/blob/master/index.js#L19">lineno 19</a>
+</li>
+</ul></dd>
+</dl>
 </dd>
 </dl>
 </article>

@@ -6,15 +6,20 @@ function decorate (fn) {
   return function (interval) {
     if (isArray(interval)) return fn(interval)
     var i = asInterval.parse(interval)
-    return i !== null ? asInterval.stringify(fn(i)) : null
+    return i !== null ? asInterval.build(fn(i)) : null
   }
 }
 
 var SEMITONES = [0, 2, 4, 5, 7, 9, 11]
 var TYPES = 'PMMPPMM'
 
-function interval () {
-
+/**
+ * Get an inversal string from source or null if not a valid interval
+ */
+function interval (i) {
+  if (typeof i === 'string') return asInterval.build(asInterval.parse(i))
+  else if (isArray(i)) return asInterval.build(i)
+  else return null
 }
 
 /**

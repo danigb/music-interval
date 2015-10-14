@@ -27,6 +27,6 @@
     "vows": "^0.8.1"
   },
   "dependencies": {
-    "interval-parser": "^0.9.1"
+    "interval-parser": "^0.10.0"
   }
 }

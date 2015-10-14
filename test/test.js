@@ -12,6 +12,11 @@ function inversions (intervals) {
 }
 
 vows.describe('music-interval').addBatch({
+  'interval': function () {
+    assert.equal(interval('2'), '2M')
+    assert.equal(interval([1, 1, 3]), '23A')
+    assert.equal(interval('blah'), null)
+  },
   'simplify': {
     'simplify ascending intervals': function () {
       assert.equal(interval.simplify('9M'), '2M')
